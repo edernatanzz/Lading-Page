@@ -183,14 +183,12 @@
   max-width: 36rem;
   max-height: 36rem;
   overflow: hidden;
-}
-
-.gallery-img img {
-  transition: all 300ms ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center; /* Define o ponto de transformação no centro da imagem */
 }
 
 .gallery-img img:hover {
-  transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+  transform: scale(1.2);
 }
 .contact-form {
   grid-column: span 2;
@@ -323,28 +321,36 @@ footer{
   display: none;
 }
 
-.close-menu-label::after{
-  content: '☰' ;
+.close-menu-label::after {
+  content: '☰';
   position: fixed;
   z-index: 2;
   top: 0;
-  right: 2rem;
+  right: 0;
   background-color: var(--primary-color);
-  color:var(--white-color) ;
+  color: var(--white-color);
   font-size: 4rem;
   line-height: 2.5rem;
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
+  
+  transition: transform 0.3s ease-in-out; /* Adicione uma transição para a rotação */
+  width: 3rem; /* Defina uma largura fixa para o botão */
+  height: 3rem; /* Defina uma altura fixa para o botão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* × */
-.close-menu:checked~.menu{
-  display: block;
 
+/* × */
+.close-menu:checked~.menu {
+  display: block;
 }
 .close-menu:checked~.close-menu-label::after{
   display: block;
   content: '×';
+  border-radius: 50%; /* Adicione uma borda arredondada */
   font-size: 4rem;
 
 }
