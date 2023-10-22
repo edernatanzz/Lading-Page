@@ -276,6 +276,14 @@ footer{
 }
 @media (max-width: 800px){
   
+.main-content{
+  margin-top: 6rem;
+}
+.intro-text-content h2{
+  font-size: 5rem;
+}
+
+
 
   .intro-content, .grid {
     grid-template-columns: 1fr;  
@@ -323,8 +331,8 @@ footer{
   right: 2rem;
   background-color: var(--primary-color);
   color:var(--white-color) ;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 4rem;
+  line-height: 2.5rem;
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
@@ -337,6 +345,7 @@ footer{
 .close-menu:checked~.close-menu-label::after{
   display: block;
   content: '×';
+  font-size: 4rem;
 
 }
 .menu-spacing{
