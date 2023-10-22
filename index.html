@@ -9,13 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body class="main-bg section">
+<body class="main-bg">
+
+    <input id="close-menu" class="close-menu"
+    type="checkbox" aria-label="Close menu" 
+    role="button">
+    <label class="close-menu-label"  for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#"><img src="assets/img/img curriculo.PNG" alt=""></a></h1>
+            <h1 id="home"><a href="#"><img src="assets/img/img curriculo.PNG" alt=""></a></h1>
             <nav>
-                <ul>
-                    <li><a href="#intro">Home</a></li>
+                <ul onclick="getElementById('close-menu').checked= false; ">
+                    <li><a href="#">Home</a></li>
                     <li><a href="#sobremin">Sobre mim</a></li>
                     <!-- <li><a href="#grid-one">Grid-One</a></li> -->
                     <li><a href="#tecnologias">Tecnologias</a></li>
@@ -28,10 +33,12 @@
 
     <div class="menu-spacing"></div>
 
-    <section id="intro" class="intro main-bg section">
+    <section  class="intro main-bg section">
         <div class="main-content intro-content">
-            <div class="intro-text-content">
-                <h2>Hi there, I am Eder Natan</h2>
+            <div  class="intro-text-content">
+                <h2>Hi there, I am <div class="intro-text-content">
+                    <h2><span id="typed-name"></span></h2>
+                </div></h2>
                 <p>Welcome to my Website</p>
             </div>
             <div class="intro-img">
@@ -40,6 +47,7 @@
         </div>
     </section>
 
+    
     <section id="sobremin" class="white-bg section">
         <div class="main-content sobremin-content">
             <h2>Sobre Mim</h2>
@@ -49,10 +57,13 @@
         </div>
     </section>
 
-    <section id="tecnologias" class="main-content grid-one main-bg section">
+
+
+    <div id="tecnologias" > 
+    <section  class="main-content grid-one main-bg section">
         <div class="grid-one-content">
-            <h3 class="grid-main-heading">Tecnologias</h3>
-            <p class="grid-description">uma breve descrição</p>
+            <h3  class="grid-main-heading">Tecnologias</h3>
+            <p class="grid-description">experiência em várias tecnologias, incluindo:</p>
         </div>
         <div class="grid">
             <article>
@@ -68,7 +79,7 @@
                 <p>Construindo Aplicações Web de Forma Eficiente e Escalável com Python, HTML, CSS e JavaScript.</p>
             </article>
         </div>
-    </section>
+    </section></div>
 
     <section id="projetos" class="main-content grid-one white-bg section">
         <div class="grid-one-content">
@@ -84,57 +95,86 @@
             <div class="gallery-img">
                 <img src="assets/img/sucelso-admin.PNG" alt="página escolar criada com Django">
             </div>
-            <div class="gallery-img">
-                <img src="assets/img/sucelso-admin.PNG" alt="página escolar criada com Django">
-            </div>
-            <div class="gallery-img">
-                <img src="assets/img/sucelso-admin.PNG" alt="página escolar criada com Django">
-            </div>
-            <div class="gallery-img">
-                <img src="assets/img/sucelso-admin.PNG" alt="página escolar criada com Django">
-            </div>
+            
         </div>
     </section>
     <div class="menu-spacing"></div>
 
-    <section id="intro" class="intro main-bg section">
+    <section id="contact" class="intro main-bg section">
         <div class="main-content intro-content">
             <div class="intro-text-content">
-
-                <h3>teste asda</h3>
-                
+                <h3>Gostaria de entrar em contato comigo?</h3>
+                <p>Fique à vontade para preencher o formulário abaixo ou me enviar um e-mail. Estou sempre aberto a novas oportunidades e colaborações.👇</p>
             </div>
             <div class="intro-img">
-                <img src="assets/img/img_intro.svg" alt="um homem sentado">
+                <img src="assets/img/imgcontact.svg" alt="um homem sentado">
             </div>
-            <div class="contact-form">
+        </div>
+        <div class="contact-form">
+            <form>
                 <fieldset>
-                    <legend>Entre em Contato</legend>
+                    <legend></legend>
                     <div class="form-group">
                         <label for="first-name">Nome</label>
-                        <input type="text" name="nome" id="first-name">
+                        <input type="text" name="nome" id="first-name" placeholder="Digite seu nome">
                     </div>
                     <div class="form-group">
                         <label for="last-name">Sobrenome</label>
-                        <input type="text" name="sobrenome" id="last-name">
+                        <input type="text" name="sobrenome" id="last-name" placeholder="Seu Sobrenome">
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="Endereço de Email">
                     </div>
                     <div class="form-group full-width">
                         <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="3"></textarea>
                     </div>
                     <div class="form-group full-width">
                         <button type="submit">Enviar</button>
                     </div>
                 </fieldset>
-            </div>
+            </form>
         </div>
     </section>
+    <section class="section2"></section>
+    <footer id="footer" class="footer section2" >
+        <h7><a href=""></a>© Todos os direitos reservados.</h7>
+        <p>Siga-me nas redes sociais:</p>
+            <p><a href="https://www.facebook.com/eder.natan.71"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACrUlEQVRYR+1YS3LTQBDtEaHYTvZYcW4QThDnBskJCCcAL4lJ4VQib3FOQG6QcILkBoQTIAx7Zo1LGnokOdGM5teWFymKrvLGGs+8ef36dcsMnliwJ4YH/g1A/OX5CBIYgXy2D0xyZHnYMJ3jFXOQLIey+CJ+nd5RMxDNEB9OOZRbxwDsNR6yF3mQAJBnYvFhHrk+LmU1I8knAhDzfMXaWPw8uQkBCzLE04t3yMpH3EilpmeUyNbp1LeJFxBPs8/4Y0zTBkOyO2TqwLWjE1DDjEoTNVA3oD4roVt+z+ZicTK2bWwFxAezQ6wexQ4lTVdYeZcAy1zkUwWoCufFJDuyaaoDqK6m57cEAQsU7BuXYJvLXVvYEGIx2Ta/7wKqRUxIlZv+iqGabRsgfNoVuQVQ9t2ff+NOSbIr8ve5edOKaXjBoShHaC4q/bbosKQB4sNsD0r4SlBxjrTvtteTU16WB21H1wGl51OARHlOXFhKmF6desp1QDvZNUg4jEODqxjciB+TI40hqncZlzIYylS6YvvUZgChZ7WrzQREE/QmGAoA+h0ww46IQ+nl6QwtRKKVuAMZeiCGmjI6oLAutT11QIPZLZrYyHMZOqA06Gv3yNCr1ZkGQ0F61wEk/Wn1lb3X5qttVdNsDVnymzkN8kF2jHawX61m2JxDNmI02X6to3+VCUiW2Hoep4MuoPqGrt6js98bUExzrccPZZDDUEn3dOoOO3WWLdEM9WomCuixR+uIHdBWCGIMbX2GiCPsI6jAkL+ehnDUXY7bQm6nIeI1yONNZEBsDsmfMxcYp4ZM4TSaUmOoPvTHA8K5G/BFcXIVlmVoRet5M3y9fajAMCA00vISkmLuY4WUMmsVVo5eVHOT+SZag0521J8NsFXcxwJZnRPUEIHAjSz9DyhE41/vKVM0UO+ELAAAAABJRU5ErkJggg=="/></a>
+            <a href="https://www.instagram.com/edernattan/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADMElEQVRYR+1XPW7UQBT25gDEOUE21CmSE5BUdCg5QWw4AElDmyBKCrajI14kahZoEA3mBCwnYG8QU6PEfJ/1XjTMvFnPRrvSFrG0Gq/9Zt73vvfrQbZm12DN8GT3gPo8kszQZV7kOGyI3x5+vNfLvddnjdxwnZVNVfcB0fe9gADkAEJvBIylPFVX3WbZGOCqeRuigMgIXp5j86lxgDLAV+49/yvoGPgKwM4AzN/XqYkCqvLiEu8LAUPrPuGe1NMF5mGW5WSY7ELRc6x0N6+6aKpDS94EhEOO8OIjNwDISyyjRUDEXAIj6fqOcZx7jDMnvqwJCBt/06p5lsSU+s+r/OQVHLGbte3b4s/4G87+KUw1YGkrFRAMiFuRCub9g/LxzUb7VeS/AMATj/0tn/mAIWzYw0NaQVp3sGEWiQ0GbQHZbawH+HUpjj2/sGfEPR/yZ9t/s+tufzvIXpdX1Qucz3iiB3j+oV8SLEBUwoDOYFEsxgiaMhqkPuYplJVQNn23+fThxuB6t2jGnykk2XslgJhtHXi9LECnUndmALTjaxIGv+O5pjWZqYUhMjXUPQC1T1D+GYgjAsqZMHh/cWdAYh2zj4pJeYll4sYBZNQgiphGLRPQrTJxSeVbL25xy0bgFgUE2RG8cNbH0IVU6MA6p1iaKese7JSOCZQee+86ly0DkNaQQIkRJ1oEA/DLZEgLZgogbT1TMLS/KoaiVhsMMfiPGPQrcxky6LZGLRDUQWov6rK5dcjpRUz7IINkfiI7DFpWbtai/6aDuwIyM8kt/eImKmPX5sr6pNW7kY5eG+5cqDBqDYmmtlRrsjC06hCesXXQVcF4QXkwpM07qVInNVcpgHTvI2FFm+sP6ozNT17zDmYiq5dxdNXmZw5REVaSHnuJEUwTKx/QjPhhY2asmX0uZYQNMimJCkPIbbxWp+eWeUO+FjbKMUjZBDngzxYBxJhh8EPRCVYWSl78aGA4BB8LUUAyarD86yEujhRQsc8hguHwZp4RBaTaheZz/I99Z6USxrrEL5hoBs51ma9FPqUZjCwLm6koAIJlgK4OJkfrjF6GUhUvS+4eUB+Ta8fQP+4CyjTlBlQlAAAAAElFTkSuQmCC"/></a> 
+            <a href="https://www.linkedin.com/in/edernatandev/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABzklEQVRYR+2YX1LCMBDGN+kF4rvW3kBuINwAj+AN5FVlLIOFR/UEcgO4gXgCuYEM+G7eGRI30UKaVov9Azh2ZzrTBpL8+Lb5soHAngXZMx6ogNIykqgQO+zWgUI9rXOuzwWM+Vt7bI8RA2JHvSYQOcw12aadJZzz+dXA/HocyO36APRm0zHzfU90+KyN863jrwKJDkhnAkR4AOQunypm70wKRTsx9/aiOKgsQJKc8fnlKPxdzAtqIOClGJWyAIFs8dn1/Qpo5wppEtkC6oxgKWtoCY/YwHaoUDFTJ4+SKWUwwcHUFUYNb9SlYrBqJaiahCY+cwDxAJJO9aok9OSrPYEpE9APq4wuDvjURwDModf3QIgh0EUjbLMWgnJ/tA0zSgXy9Xtlw6yhNPDr1oDMiZjnsyQw5gYKyFCpRIU+06Y96kndgiRj9K9GBNTtoctLNNYwygY6DobRF9j2sG0DpaSExSqJshVyg3edrm9SUgHhKqoUgkg9ZDi1Xvb/UyE0OCDL5/Umam6WWNpGwjoc2H2lc4rlSz2nMUanLPYpkw8Vi/D7zVWfWqnaj8oPq15XEyYfpfXpdRkWYeWAqQLOWYzsqqD69yNN7kqhNIU+AF1HvzQrU22pAAAAAElFTkSuQmCC"/></a>
+                <a href="https://github.com/edernatanzz"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACg0lEQVRYR+2XgU0DMQxFYQPYoEwATABMQJmAMgEwAWUCYAJuA2ACugEwAd0ARsAPXSqf6yS+a5EQwpJVpXGcn287zm1u/DLZ/GV4Nv4EoC1hdU/0UPRAdCTKf8in6KvoXPRJdNY3An0YYtML0eMWUHSvWzG8jBpHAcHGfctG1Le2gzlANbXFEUBTcXKuwlLzWZqvslUDdNOGaRUQdi15dZRzWAJEvgDoJ+RRnJ54jnOAyJkHEyZONRI9FWU+IrBBtVF5z2YBgADWEQ8Q1cRiSjsJDvfVmLkr0TfReaup9JnbbYE0ag0+D9WYRN8R5XchHqCJzFJRWmYyyMbd2OaG+MS3lmsZTGuAXsRAs4M9p9gObpwzIwXGZnLJr2UIIACyYkM2BJvHEH7ORJvk0ALKVRb5A6hVhBz7cBwABlDfYgF5tM7EbtX8Sft5LHXYt4C8/Knerj1om4ot1amlk0cW0LtYjsyCdQLKpcQCRwRQ9lbtwUwy7Q3IC9k6c6ha+pGk5nTcQZ0bdQA7VBkHtilRTGov6dh7HXmUC1cj/rNln7srAEXpE74hwoVLL0v9TvvoNFmvl+lKg07dRmCK/hMNHwAo80kGzFKDrTXX1Pxsp6by6PQA9MARej4AOIzHSmIo1Fwx1iylXmMrsHQd5PqWDtUSO0yWHmj6QZXeLWw0blkh9rmcwoYSLwmPfhjuSPQJ2/dyJFTeqyFtnq3aEiAW60c+Tu5E55WTM10C1Mg87LiFUQOE86mo1xBL31k5QNUqjQBKJyYnRoqdzsPKsGYBwcbaPhT1Xty2fDQCzP1qaI0TIIBQ2oQpdHdFGbJpw4bkUmmTiM1SOg4FFMjrYSb/gGq8fQHTNYolgM+LzgAAAABJRU5ErkJggg=="/></a>
+        </p>
+            
+    </footer>
     
 
            
 </body>
+
+<script>
+    const textToType = "Eder Natan";
+    const typedNameElement = document.getElementById("typed-name");
+    const typingColors = ["blue", "red", "green", "orange"]; // Cores de digitação
+    let colorIndex = 0;
+
+    function typeText(text, index) {
+        if (index < text.length) {
+            typedNameElement.innerHTML += `<span class="typing-color">${text.charAt(index)}</span>`;
+            index++;
+            setTimeout(function () {
+                typeText(text, index);
+            }, 250); // Velocidade de digitação
+        } else {
+            colorIndex = (colorIndex + 1) % typingColors.length;
+            setTimeout(function () {
+                typedNameElement.innerHTML = ""; // Limpa o texto digitado
+                typeText(textToType, 0);
+            }, 500); // Tempo de espera antes do próximo loop
+        }
+    }
+
+    typeText(textToType, 0);
+</script>
 </html>
